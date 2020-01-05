@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+  margin: 30px;
+}
+.header {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #E9EFE7;
+  text-align: left;
+  font-weight: 600;
+  font-size: 40px;
+  color: #11669A;
+}
+
+.footer {
+  padding: 30px;
+  background-color: #E9EFE7;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  color: #11669A;
+}
+
+.footer button {
+  padding: 10px 20px;
+  background-color: #11669A;
+  border: none;
+  margin-right: 10px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: initial;
+}
+
+.footer button:nth-child(1) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.footer button:nth-child(2) {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.container {
+  display: flex;
+  overflow-x: hidden;
+}
+.container-cell {
+  margin: 20px;
+}
+
+.container-cell img {
+  width: 200px;
+  height: 200px;
+}
+
+@media only screen and (min-width: 600px) {
+  .prevArrow,
+  .nextArrow {
+    display: none;
+  }
+}
+
+.imgTitle {
+  color: #11669A;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width:1024px) {
+  .container-cell img {
+    width: 150px;
+    height: 200px;
+  }
+  .container {
+    margin: 10px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container-cell img{
+    width: 410px;
+    height: 300px;
+  }
+  .container-cell {
+    margin: 0;
+  }
+  .prevArrow {
+    background: url("./arrow.svg") no-repeat;
+    width: 50px;
+    height: 60px;
+    transform: rotate(180deg);
+    border: none;
+    position: absolute;
+    top: 30%;
+    left: 5px;
+  }
+  .nextArrow {
+    background: url("./arrow.svg") no-repeat;
+    width: 50px;
+    height: 60px;
+    border: none;
+    position: absolute;
+    top: 30%;
+    left: 85%;
+  }
+  .footer {
+    display: none;
+  }
+  .App {
+    margin: 0;
+  }
+}

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match Screenshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    aria-label="Carousel Test Header"
+    className="header"
+    tabIndex="0"
+  >
+    Carousel Test
+  </header>
+  <div>
+    <div
+      className="container"
+    >
+      <button
+        aria-label="prevous button"
+        className="prevArrow"
+        onClick={[Function]}
+        prev={false}
+        tabIndex="0"
+      />
+      <div>
+        Loading...
+      </div>
+      <button
+        aria-label="next button"
+        className="nextArrow"
+        next={false}
+        onClick={[Function]}
+        tabIndex="0"
+      />
+    </div>
+    <footer
+      className="footer"
+    >
+      <button
+        disabled={false}
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Prev
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Next
+      </button>
+    </footer>
+  </div>
+</div>
+`;

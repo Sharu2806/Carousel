@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match Screenshot 1`] = `
+<header
+  aria-label="Carousel Test Header"
+  className="header"
+  tabIndex="0"
+>
+  Carousel Test
+</header>
+`;

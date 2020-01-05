@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match Screenshot 1`] = `
+<footer
+  className="footer"
+>
+  <button
+    tabIndex="0"
+  >
+    Prev
+  </button>
+  <button
+    tabIndex="0"
+  >
+    Next
+  </button>
+</footer>
+`;
