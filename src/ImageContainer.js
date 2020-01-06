@@ -9,8 +9,6 @@ class ImageContainer extends Component {
     this.state = {
       allImages: [],
       id: 0,
-      next: false,
-      prev: false,
       activeRow: [],
       lastId: 0
     };
@@ -82,16 +80,16 @@ class ImageContainer extends Component {
   }
 
   render() {
-    const { allImages, next, prev } = this.state;
+    const { allImages } = this.state;
     const showImage = (allImages.length !== 0) ? this.getImage() : <div>Loading...</div>;
     return (
       <div>
       <div className="container">
-        <button tabIndex="0" aria-label="prevous button" className="prevArrow" onClick={this.onClickPrev} prev={prev}/>
+        <button tabIndex="0" aria-label="prevous button" className="prevArrow" onClick={this.onClickPrev}/>
           {showImage}
-          <button tabIndex="0" aria-label="next button" className="nextArrow" onClick={this.onClickNext} next={next}/>
+          <button tabIndex="0" aria-label="next button" className="nextArrow" onClick={this.onClickNext}/>
          </div>
-        <Footer onClickNext={this.onClickNext} onClickPrev={this.onClickPrev} next={next} prev={prev} />
+        <Footer onClickNext={this.onClickNext} onClickPrev={this.onClickPrev}/>
       </div>
     )
 
