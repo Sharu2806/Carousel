@@ -5,11 +5,13 @@ exports[`Match Screenshot 1`] = `
   className="footer"
 >
   <button
+    className="prev"
     tabIndex="0"
   >
     Prev
   </button>
   <button
+    className="next"
     tabIndex="0"
   >
     Next

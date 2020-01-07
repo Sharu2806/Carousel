@@ -15,13 +15,11 @@ describe('App Component', () => {
 
   test('should contains one footer', () => {
     const wrapper = mount(<App />);
-    console.log(wrapper.find('div'));
-    expect(wrapper.find('div')).to.have.length(1);
+    expect(wrapper.find('footer').length).toBe(1);
   });
 
   test('should contains one Header', () => {
-    const wrapper = shallow(<App />);
-    console.log(wrapper.html());
-    expect(wrapper.find('header.header')).to.have.length(1);
+    const wrapper = mount(<App />);
+    expect(wrapper.find('header').length).toBe(1);
   });
 });
