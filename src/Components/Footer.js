@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const Footer = (props) => {
   return (
@@ -8,5 +9,10 @@ const Footer = (props) => {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  onClickPrev: propTypes.func,
+  onClickNext: propTypes.func
+};
 
 export default Footer;

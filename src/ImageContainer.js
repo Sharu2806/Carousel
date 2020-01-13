@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
-import { Footer } from './Components'
-import axios from 'axios';
+import propTypes from 'prop-types';
+import { Footer } from './Components';
+
+
 
 
 class ImageContainer extends Component {
   constructor(props) {
     super(props);
+    const { allImages } = props;
+    const activeRow = allImages.slice(0,5);
     this.state = {
-      allImages: [],
+      activeRow,
       id: 0,
-      activeRow: [],
       lastId: 0
     };
   }
 
-  componentDidMount() {
-    const that = this;
-    axios.get('https://pixabay.com/api/?key=9656065-a4094594c34f9ac14c7fc4c39&q=beautiful+landscape&image_type=photo')
-    .then(function (response) {
-      that.setState({allImages: response.data.hits}, () => {
-        that.setState({activeRow: that.state.allImages.slice(0,5)});
-      });
-    }).catch(function (error) {
-      console.log(error);
-    });
-  }
+  
 
   getImage = () => {
     const { activeRow } = this.state;
@@ -39,7 +32,8 @@ class ImageContainer extends Component {
   }
 
   onClickNext = () => {
-    const { activeRow, allImages, id, lastId } = this.state;
+    const { activeRow, id, lastId } = this.state;
+    const { allImages } = this.props;
     const length = allImages.length;
     const row = activeRow;
     row.shift();
@@ -60,7 +54,8 @@ class ImageContainer extends Component {
   }
 
   onClickPrev = () => {
-    const { activeRow, allImages, id } = this.state;
+    const { activeRow, id } = this.state;
+    const { allImages } = this.props;
     const row = activeRow;
     let index = 0;
     row.pop();
@@ -80,13 +75,11 @@ class ImageContainer extends Component {
   }
 
   render() {
-    const { allImages } = this.state;
-    const showImage = (allImages.length !== 0) ? this.getImage() : <div>Loading...</div>;
     return (
       <div>
       <div className="container">
         <button tabIndex="0" aria-label="prevous button" className="prevArrow" onClick={this.onClickPrev}/>
-          {showImage}
+          {this.getImage()}
           <button tabIndex="0" aria-label="next button" className="nextArrow" onClick={this.onClickNext}/>
          </div>
         <Footer onClickNext={this.onClickNext} onClickPrev={this.onClickPrev}/>
@@ -96,4 +89,8 @@ class ImageContainer extends Component {
   }
 }
 
+ImageContainer.propTypes = {
+  allImages: propTypes.object
+}
 export default ImageContainer;
+

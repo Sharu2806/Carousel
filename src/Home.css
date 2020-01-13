@@ -2,6 +2,8 @@
   text-align: center;
   margin: 30px;
 }
+
+
 .header {
   padding: 20px;
   margin-bottom: 30px;
@@ -55,6 +57,13 @@
     height: 250px;
 }
 
+.imgTitle {
+  color: #11669A;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 @media only screen and (min-width: 600px) {
   .prevArrow,
   .nextArrow {
@@ -62,12 +71,6 @@
   }
 }
 
-.imgTitle {
-  color: #11669A;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: capitalize;
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
