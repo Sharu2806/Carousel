@@ -17,13 +17,11 @@ class ImageContainer extends Component {
     };
   }
 
-  
-
   getImage = () => {
     const { activeRow } = this.state;
-    return activeRow.map((image) => {
+    return activeRow.map((image, index) => {
         return (
-            <div className="container-cell">
+            <div key={`image-${index}`} className="container-cell">
               <img src={image.webformatURL} alt="Sample images" />
               <p tabIndex="0" aria-label={image.tags} className="imgTitle">{image.tags}</p>
             </div>
@@ -90,7 +88,7 @@ class ImageContainer extends Component {
 }
 
 ImageContainer.propTypes = {
-  allImages: propTypes.object
+  allImages: propTypes.array
 }
 export default ImageContainer;
 

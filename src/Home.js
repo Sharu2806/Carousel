@@ -16,7 +16,7 @@ class Home extends Component {
     const that = this;
     axios.get('https://pixabay.com/api/?key=9656065-a4094594c34f9ac14c7fc4c39&q=beautiful+landscape&image_type=photo')
     .then(function (response) {
-      that.setState({allImages: response.data.hits});
+      that.setState(() => ({allImages: response.data.hits}));
     }).catch(function (error) {
       console.log(error);
     });

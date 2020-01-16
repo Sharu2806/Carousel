@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should Match Screenshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    aria-label="Carousel Test Header"
+    className="header"
+    tabIndex="0"
+  >
+    Carousel Test
+  </header>
+</div>
+`;
